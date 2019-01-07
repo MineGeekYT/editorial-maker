@@ -1,0 +1,22 @@
+html
+  head
+    meta(charset="utf-8")
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css")
+    script(src="//maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js")
+    title Editorial Maker
+  body
+    #loadForm.d-flex.bd-highlight.justify-content-center.h-75.align-items-center
+      .bg-light.text-dark.p-4.rounded.border.border-dark
+        form#loadContest(action="/load")
+          .form-group
+            input#APIKey.form-control(placeholder='Polygon API Key')
+          .form-group
+            input#APISecret.form-control(placeholder='Polygon API Secret')
+          .form-group
+            input#PGContestID.form-control(placeholder='Polygon Contest ID')
+          .form-group
+            input#CFContestID.form-control(placeholder='Codeforces Contest ID')
+          .d-flex.justify-content-center
+            button.btn.btn-primary(type='submit') Load Contest
+    script(src="js/helper.js")
